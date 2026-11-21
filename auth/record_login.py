@@ -5,7 +5,7 @@ from playwright.async_api import async_playwright, Error as PWError
 LOGIN_URL   = "https://www.linkedin.com/uas/login?session_redirect=%2Fsales&_f=navigator&fromSignIn=true&src=or-search&veh=www.google.com&trk=lss-microsite-utility-nav-sign-into-sales-navigator"
 USER_ENV    = "LINKEDIN_USERNAME"
 PASS_ENV    = "LINKEDIN_PASSWORD"
-STATE_FILE  = "state.json"        # where we cache the session
+STATE_FILE  = "auth/state.json"   # where we cache the session
 
 async def main() -> None:
     user = os.getenv(USER_ENV)

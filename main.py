@@ -39,6 +39,8 @@ async def process_url(context, url, all_rows, seen):
     await page.close()
 
 async def main():
+    if not START_URLS:
+        sys.exit("Add search URLs to urls.txt (see urls.example.txt).")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False, slow_mo=250)
         context = await browser.new_context(storage_state="auth/state.json")

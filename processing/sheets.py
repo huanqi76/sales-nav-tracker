@@ -8,7 +8,7 @@ import urllib.parse
 import re
 HANDLE_RE = re.compile(r"/in/([^/]+)/")
 
-SA_JSON     = "service_account.json"
+SA_JSON     = "auth/gcp_service_account.json"
 SHEET_NAME  = "Connections to Track"
 # LINKS_TAB   = "links"
 DATA_TAB    = "data"
